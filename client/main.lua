@@ -11,7 +11,6 @@ local lifts = {}
 local isNearLift = false
 local UIopen = false
 
--- Spawn Car Lifts from the Config File
 Citizen.CreateThread(function()
     for _, liftCoords in ipairs(Config.CarLifts) do
         TriggerEvent('nkhd_carlift:spawnLift', liftCoords)
@@ -44,9 +43,7 @@ AddEventHandler('nkhd_carlift:spawnLift', function(liftCoords)
 
         table.insert(lifts, { frame = liftFrame, platform = liftPlatform, startZ = liftCoords.z, heading = liftCoords.heading, vehicle = nil, frozen = false })
 
-        ESX.ShowNotification('Car lift has been spawned')
     else
-        ESX.ShowNotification('Failed to spawn car lift')
     end
 end)
 
