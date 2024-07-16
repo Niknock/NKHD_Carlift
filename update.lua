@@ -12,7 +12,7 @@ local function checkVersion(err, responseText, headers)
     end
     if version ~= responseText and tonumber(version) < tonumber(responseText) then
         print("^1----------------------------------------------------------------------------------^7")
-        print("[^3"..script.."^7] is outdated, latest version is: ^2"..responseText.."^7, installed version: ^1"..version.."^7!\nupdate from https://github.com/Niknock/NKHD_Car_Lift/tree/main")
+        print("[^3"..script.."^7] is outdated, latest version is: ^2"..responseText.."^7, installed version: ^1"..version.."^7!\nupdate from https://github.com/Niknock/NKHD_Carlift/tree/main")
         print("^1----------------------------------------------------------------------------------^7")
     elseif tonumber(version) > tonumber(responseText) then
         print("^3----------------------------------------------------------------------------------^7")
@@ -24,5 +24,5 @@ local function checkVersion(err, responseText, headers)
 end
 
 Citizen.CreateThread( function()
-    PerformHttpRequest("https://raw.githubusercontent.com/Niknock/NKHD_Car_Lift/main/version", checkVersion, "GET")
+    PerformHttpRequest("https://raw.githubusercontent.com/Niknock/NKHD_Carlift/main/version", checkVersion, "GET")
 end)
