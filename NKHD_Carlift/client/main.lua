@@ -32,8 +32,8 @@ AddEventHandler('nkhd_carlift:spawnLift', function(liftCoords)
         Citizen.Wait(1)
     end
 
-    local liftFrame = CreateObject(frameHash, liftCoords.x, liftCoords.y, liftCoords.z, true, true, true)
-    local liftPlatform = CreateObject(platformHash, liftCoords.x, liftCoords.y, liftCoords.z, true, true, true)
+    local liftFrame = CreateObject(frameHash, liftCoords.x, liftCoords.y, liftCoords.z, false, true, true)
+    local liftPlatform = CreateObject(platformHash, liftCoords.x, liftCoords.y, liftCoords.z, false, true, true)
 
     if liftFrame and liftPlatform then
         PlaceObjectOnGroundProperly(liftFrame)
