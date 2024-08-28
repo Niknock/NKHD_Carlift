@@ -19,6 +19,7 @@ body {
     right: 20px;  
     width: 350px;
     box-shadow: 0 0 15px 5px rgba(0, 35, 70, 0.7);
+    display: none;
 }
 
 button {
